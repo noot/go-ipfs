@@ -116,3 +116,5 @@ require (
 )
 
 go 1.13
+
+replace github.com/ipfs/go-ipfs-cmds => ../../ipfs/go-ipfs-cmds
