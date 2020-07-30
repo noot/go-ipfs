@@ -31,7 +31,7 @@ require (
 	github.com/ipfs/go-graphsync v0.0.5
 	github.com/ipfs/go-ipfs-blockstore v0.1.4
 	github.com/ipfs/go-ipfs-chunker v0.0.5
-	github.com/ipfs/go-ipfs-cmds v0.2.9
+	github.com/ipfs/go-ipfs-cmds 6343ac6b2e895e31dcf12f104c204a61f81ac603
 	github.com/ipfs/go-ipfs-config v0.9.0
 	github.com/ipfs/go-ipfs-ds-help v0.1.1
 	github.com/ipfs/go-ipfs-exchange-interface v0.0.1
@@ -116,5 +116,3 @@ require (
 )
 
 go 1.13
-
-replace github.com/ipfs/go-ipfs-cmds => ../../ipfs/go-ipfs-cmds
