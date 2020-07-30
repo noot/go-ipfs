@@ -108,7 +108,7 @@ test_name_with_self() {
 
         # test publishing with B36CID and B58MH resolve to the same B36CID
 
-        test_expect_success "generate and verify a new key" '
+        test_expect_success "verify self key output" '
         B58MH_ID=`ipfs key list -f=b58mh -l | grep self | cut -d " " -f1` &&
         B36CID_ID=`ipfs key list -f=b36cid -l | grep self | cut -d " " -f1` &&
         test_check_peerid "${B58MH_ID}" &&
@@ -142,7 +142,6 @@ test_name_with_self() {
         OBJECT_HASH="$(echo "{\"thing\": {\"/\": \"${HELLO_HASH}\" }}" | ipfs dag put)"
         '
         test_expect_success "'ipfs name publish --allow-offline /ipld/...' succeeds" '
-        PEERID=`ipfs key list -f=b36cid -l | grep self | cut -d " " -f1` &&
         test_check_peerid "${PEERID}" &&
         ipfs name publish --allow-offline "/ipld/$OBJECT_HASH/thing" >publish_out
         '
