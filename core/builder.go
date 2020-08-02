@@ -6,7 +6,7 @@ import (
 	"time"
 
 	"github.com/ipfs/go-ipfs/core/bootstrap"
-	"github.com/ipfs/go-ipfs/core/node"
+	"github.com/noot/go-ipfs/core/node"
 
 	"github.com/ipfs/go-metrics-interface"
 	"go.uber.org/fx"
